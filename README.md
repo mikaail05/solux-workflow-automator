@@ -1,8 +1,8 @@
-AI Workflow Automator
+**AI Workflow Automator**
 
 A mini AI workflow automation project built for Solux Tech to demonstrate concepts learned from the Anthropic training program, including Claude API integration, structured prompting, MCP tool design, and workflow automation.
 
-Overview
+**Overview**
 
 The AI Workflow Automator turns raw meeting notes into structured business outputs.
 
@@ -14,7 +14,7 @@ The user pastes meeting notes into the app, runs the workflow, and receives:
 
 The project is designed to show how AI can move beyond a basic chatbot and support repeatable business workflows.
 
-Tech Stack
+**Tech Stack**
 
 * Next.js
 * TypeScript
@@ -24,7 +24,7 @@ Tech Stack
 * Custom local MCP server
 * Tailwind CSS
 
-How It Works
+**How It Works**
 
 The application follows this workflow:
 
@@ -40,7 +40,7 @@ Claude API
    ↓
 Summary + Action Items + Follow-Up Email Draft
 
-Project Structure
+**Project Structure**
 
 solux-workflow-automator
 │
@@ -62,7 +62,7 @@ solux-workflow-automator
 ├── package.json
 └── .gitignore
 
-Key Files
+**Key Files**
 
 app/page.tsx
 
@@ -86,7 +86,7 @@ The custom MCP server. It exposes three tools:
 
 Each tool uses Claude to generate a specific part of the final output.
 
-MCP Tools
+**MCP Tools**
 
 summarize_notes
 
@@ -100,7 +100,7 @@ draft_follow_up_email
 
 Creates a professional follow-up email draft using the summary and action items.
 
-Skills Demonstrated
+**Skills Demonstrated**
 
 This project demonstrates:
 
@@ -112,7 +112,7 @@ This project demonstrates:
 * Human-in-the-loop AI design
 * Full-stack application development with Next.js
 
-Environment Variables
+**Environment Variables**
 
 Create a .env.local file in the root of the project:
 
@@ -121,7 +121,7 @@ ANTHROPIC_MODEL=claude-sonnet-4-5
 
 The real .env.local file is ignored by Git to keep API keys secure.
 
-Getting Started
+**Getting Started**
 
 Install dependencies:
 
@@ -135,7 +135,7 @@ Open the app:
 
 http://localhost:3000
 
-Future Improvements
+**Future Improvements**
 
 Potential next steps include:
 
@@ -146,6 +146,6 @@ Potential next steps include:
 * Add approval workflows before sending or updating anything
 * Deploy the app as a hosted internal tool
 
-Purpose
+**Purpose**
 
 This project was built as a focused mini project to demonstrate how Claude and MCP can be used to create structured AI systems that complete practical workplace workflows.
