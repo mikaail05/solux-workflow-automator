@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 type WorkflowResult = {
@@ -87,13 +88,16 @@ export default function Home() {
               <p className="text-xs uppercase tracking-[0.35em] text-[#6f6a63]">
                 AI Workflow Automator by
               </p>
-              <div className="mt-3">
-                <h1 className="font-serif text-4xl tracking-[0.18em] text-[#111111]">
-                  SOLUX TECH
-                </h1>
-                <p className="mt-1 text-[10px] uppercase tracking-[0.32em] text-[#6f6a63]">
-                  Smarter foundations for smarter growth
-                </p>
+
+              <div className="mt-4 w-[360px] max-w-full">
+                <Image
+                  src="/solux-logo.png"
+                  alt="Solux Tech logo"
+                  width={900}
+                  height={240}
+                  priority
+                  className="h-auto w-full"
+                />
               </div>
             </div>
 
@@ -230,13 +234,13 @@ export default function Home() {
 
         {result && (
           <section className="mt-8 grid gap-8 lg:grid-cols-3">
-            <OutputCard eyebrow="" title="Meeting Summary">
+            <OutputCard title="Meeting Summary">
               <p className="text-sm leading-7 text-[#4d4944]">
                 {result.summary}
               </p>
             </OutputCard>
 
-            <OutputCard eyebrow="" title="Action Items">
+            <OutputCard title="Action Items">
               <ul className="space-y-3 text-sm leading-6 text-[#4d4944]">
                 {result.actionItems.map((item, index) => (
                   <li
@@ -252,7 +256,7 @@ export default function Home() {
               </ul>
             </OutputCard>
 
-            <OutputCard eyebrow="" title="Follow-up Email">
+            <OutputCard title="Follow-up Email">
               <div className="space-y-4 text-sm leading-6 text-[#4d4944]">
                 <div className="border border-[#d8d2c8] bg-[#f7f4ef] p-3">
                   <p className="text-xs uppercase tracking-[0.2em] text-[#8a8177]">
@@ -365,20 +369,15 @@ function WorkflowStep({
 }
 
 function OutputCard({
-  eyebrow,
   title,
   children
 }: {
-  eyebrow: string;
   title: string;
   children: React.ReactNode;
 }) {
   return (
     <div className="border border-[#d8d2c8] bg-[#fbfaf7] p-6">
-      <p className="text-xs font-medium uppercase tracking-[0.25em] text-[#8a8177]">
-        {eyebrow}
-      </p>
-      <h2 className="mt-2 mb-5 font-serif text-3xl">{title}</h2>
+      <h2 className="mb-5 font-serif text-3xl">{title}</h2>
       {children}
     </div>
   );
